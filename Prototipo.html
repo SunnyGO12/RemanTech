@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemanTech | Software de Remanufactura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #ffffff; 
+            color: #0f172a; 
+            overflow-x: hidden;
+        }
+        /* Utilidades para un diseño limpio */
+        .glass-nav { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #f1f5f9; 
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+                              linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass-card-premium {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 1);
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-200 selection:text-blue-900">
+
+    <!-- NAVEGACIÓN GLOBAL -->
+    <nav class="glass-nav fixed top-0 w-full z-50 px-6 py-4 transition-all">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tight text-slate-900">
+                Reman<span class="text-blue-600">Tech</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 ml-auto">
+                <a href="#soluciones" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Soluciones</a>
+                <a href="#empresa" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Empresa</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- CONTENEDOR VISTA 1: LANDING PAGE -->
+    <!-- ========================================== -->
+    <div id="view-landing" class="block transition-opacity duration-300">
+        
+        <!-- SECCIÓN HERO -->
+        <header class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
+            <!-- Fondo de cuadrícula tecnológica -->
+            <div class="absolute inset-0 bg-grid-pattern opacity-30 -z-10" style="mask-image: linear-gradient(to bottom, white, transparent); -webkit-mask-image: linear-gradient(to bottom, white, transparent);"></div>
+            <!-- Resplandor azul superior -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-64 bg-blue-500 rounded-full blur-[100px] opacity-20 -z-10"></div>
+
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-700 text-xs font-bold tracking-wide uppercase mb-8 mx-auto shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                    Suite de Remanufactura v2.0
+                </div>
+                
+                <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-8" style="line-height: 1.1;">
+                    Escala tu producción a <br />
+                    <span class="text-gradient">Nivel Industrial</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Software automatizado para diagnóstico, borrado certificado y emparejamiento de hardware. Soporte masivo para iPhones, PCs y AirPods.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="openContactModal()" class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl shadow-slate-900/20 flex items-center justify-center gap-2 transform hover:-translate-y-1">
+                        Contactar Ventas
+                    </button>
+                    <a href="#soluciones" class="bg-white border border-slate-200 text-slate-900 hover:bg-slate-50 px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-sm flex items-center justify-center inline-block transform hover:-translate-y-1">
+                        Explorar Módulos
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- SECCIÓN SOLUCIONES -->
+        <section id="soluciones" class="py-24 bg-white relative z-30 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <h2 class="text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">Soluciones modulares</h2>
+                    <p class="text-lg text-slate-600">Integración perfecta en tu línea de producción. Paga solo por el hardware que procesas mediante nuestro sistema de licencias por unidad.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Tarjeta AirPods -->
+                    <div class="glass-card-premium rounded-3xl p-8 relative overflow-hidden flex flex-col h-full group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border-blue-200">
+                        <div class="absolute top-0 right-0 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow-md">Más popular</div>
+                        
+                        <div class="w-16 h-16 bg-blue-50 border border-blue-100 rounded-2xl flex items-center justify-center mb-8 shadow-inner group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">AirPods SyncTool</h3>
+                        <p class="text-slate-600 mb-8 text-base leading-relaxed flex-grow">Emparejamiento automático de estuches y auriculares. Diagnóstico de frecuencia de audio y testeo individual de salud de batería.</p>
+                        
+                        <div class="pt-6 mt-auto">
+                            <button onclick="openCalculatorView('AirPods')" class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-blue-500/30">
+                                Cotizar volumen
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta iPhone -->
+                    <div class="glass-card-premium rounded-3xl p-8 relative overflow-hidden flex flex-col h-full group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border-slate-200">
+                        <div class="w-16 h-16 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-center mb-8 shadow-inner group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-700"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">iPhone RemanOS</h3>
+                        <p class="text-slate-600 mb-8 text-base leading-relaxed flex-grow">Diagnóstico automatizado de más de 50 puntos de hardware. Incluye borrado de datos certificado bajo el estándar NIST 800-88.</p>
+                        
+                        <div class="pt-6 mt-auto">
+                            <button onclick="openCalculatorView('iPhone')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md">
+                                Cotizar volumen
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta PC -->
+                    <div class="glass-card-premium rounded-3xl p-8 relative overflow-hidden flex flex-col h-full group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border-slate-200">
+                        <div class="w-16 h-16 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-center mb-8 shadow-inner group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-700"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">PC & Laptop Suite</h3>
+                        <p class="text-slate-600 mb-8 text-base leading-relaxed flex-grow">Auditoría completa de CPU, GPU y RAM. Test de estrés termal y clonación masiva de sistemas operativos a través de red (PXE).</p>
+                        
+                        <div class="pt-6 mt-auto">
+                            <button onclick="openCalculatorView('PC')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md">
+                                Cotizar volumen
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-white border-t border-slate-200 py-12">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl font-extrabold text-slate-900">Reman<span class="text-blue-600">Tech</span></span>
+                </div>
+                <div class="text-sm text-slate-500">
+                    &copy; 2026 RemanTech. Todos los derechos reservados.
+                </div>
+                <div class="flex gap-6 text-sm font-medium text-slate-600">
+                    <a href="#" class="hover:text-blue-600 transition">Privacidad</a>
+                    <a href="#" class="hover:text-blue-600 transition">Términos</a>
+                    <a href="#" class="hover:text-blue-600 transition">Soporte API</a>
+                </div>
+            </div>
+        </footer>
+    </div> 
+    <!-- FIN CONTENEDOR VISTA 1 -->
+
+
+    <!-- ========================================== -->
+    <!-- CONTENEDOR VISTA 2: PANTALLA DE CALCULADORA (DINÁMICA) -->
+    <!-- ========================================== -->
+    <div id="view-calculator" class="hidden min-h-screen bg-slate-50 pt-32 pb-12 transition-opacity duration-300 opacity-0 relative z-40">
+        <div class="max-w-5xl mx-auto px-6">
+            <!-- Botón de regreso -->
+            <button onclick="closeCalculatorView()" class="flex items-center gap-2 text-slate-500 hover:text-blue-600 font-semibold mb-8 transition-colors bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" /></svg>
+                Volver a la página principal
+            </button>
+
+            <div class="grid md:grid-cols-2 gap-0 bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100">
+                <!-- Columna Izquierda: Información Dinámica -->
+                <div class="bg-blue-600 p-10 lg:p-14 text-white flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-50"></div>
+                    <div class="relative z-10">
+                        <div id="calc-icon-container" class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm border border-white/20">
+                            <!-- SVG inyectado dinámicamente -->
+                        </div>
+                        <h2 id="calc-title" class="text-3xl font-bold mb-4">Cotizador</h2>
+                        <p id="calc-desc" class="text-blue-100 text-lg leading-relaxed">
+                            Configura tu plan de licencias.
+                        </p>
+                        <ul id="calc-features" class="mt-8 space-y-4 text-blue-50 font-medium">
+                            <!-- Features inyectadas dinámicamente -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Calculadora -->
+                <div class="p-10 lg:p-14 flex flex-col justify-center bg-white">
+                    <div class="mb-8">
+                        <label class="block font-bold text-slate-900 mb-3 text-lg" id="calc-question">¿Cuántas unidades estimas procesar al mes?</label>
+                        <p class="text-sm text-slate-500 mb-4" id="calc-unit-desc">1 unidad equivale a un dispositivo procesado.</p>
+                        <div class="flex items-center border-2 border-slate-200 rounded-xl overflow-hidden focus-within:border-blue-600 transition-colors shadow-sm">
+                            <input type="number" id="calc-qty" value="1000" min="100" step="100" oninput="calculatePrice()" class="w-full p-5 text-3xl font-bold text-slate-900 outline-none">
+                            <span id="calc-unit-label" class="bg-slate-50 px-6 py-5 font-bold text-slate-500 border-l border-slate-200 text-lg">Unidades</span>
+                        </div>
+                        <p class="text-sm text-slate-500 mt-3 flex justify-between">
+                            <span>Precio base por unidad:</span>
+                            <span id="calc-price-label" class="font-bold text-slate-700">$0.00 USD</span>
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 mb-8">
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Inversión Mensual Estimada</p>
+                        <div class="flex items-baseline gap-2 text-slate-900">
+                            <span class="text-5xl font-extrabold" id="calc-total">$0.00</span>
+                            <span class="text-xl font-bold text-slate-500">USD</span>
+                        </div>
+                    </div>
+
+                    <button onclick="proceedToRegistration()" class="w-full bg-slate-900 hover:bg-slate-800 text-white py-4 rounded-xl font-bold text-lg transition-all shadow-md flex items-center justify-center gap-2 group">
+                        Aprobar y Crear Cuenta
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- MODAL GENÉRICO DE CONTACTO (Hero Section) -->
+    <!-- ========================================== -->
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeContactModal()"></div>
+        <div class="bg-white w-full max-w-md rounded-2xl z-10 overflow-hidden shadow-2xl mx-4 transform transition-all">
+            <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 flex justify-between items-center">
+                <h3 class="font-bold text-slate-900 text-lg">Contactar Ventas</h3>
+                <button onclick="closeContactModal()" class="text-slate-400 hover:text-slate-600 p-1 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <form onsubmit="submitContactForm(event)" class="p-6">
+                <p class="text-sm text-slate-600 mb-6">¿Tienes dudas o necesitas un plan corporativo a medida? Déjanos tus datos y un especialista te contactará.</p>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Nombre de la Empresa</label>
+                        <input type="text" required class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-slate-900 focus:ring-2 focus:ring-blue-600 outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Correo Corporativo</label>
+                        <input type="email" required class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-slate-900 focus:ring-2 focus:ring-blue-600 outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Mensaje (Opcional)</label>
+                        <textarea class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-slate-900 focus:ring-2 focus:ring-blue-600 outline-none transition-all" rows="3"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-xl font-bold transition-all mt-8 shadow-md">
+                    Enviar Solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // --- 1. Lógica del Modal de Contacto (Para botón principal) ---
+        const contactModal = document.getElementById('contact-modal');
+
+        function openContactModal() {
+            contactModal.classList.remove('hidden');
+            contactModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal() {
+            contactModal.classList.add('hidden');
+            contactModal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        function submitContactForm(e) {
+            e.preventDefault();
+            alert("¡Gracias! Tu solicitud ha sido registrada en el sistema de ventas.");
+            closeContactModal();
+            e.target.reset();
+        }
+
+        // --- 2. Lógica Dinámica de Cambio de Pantalla y Calculadora ---
+        const viewLanding = document.getElementById('view-landing');
+        const viewCalculator = document.getElementById('view-calculator');
+        
+        let currentModulePrice = 0;
+        let currentModuleName = '';
+
+        // Base de datos de los módulos
+        const modulesData = {
+            'AirPods': {
+                name: 'Cotizador AirPods SyncTool',
+                desc: 'Configura tu plan de licencias. Paga un precio fijo y transparente únicamente por cada kit procesado exitosamente en tu planta.',
+                price: 0.80,
+                unit: 'Kits',
+                unitDesc: '1 kit equivale a estuche de carga + 2 audífonos.',
+                icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>',
+                features: ['Emparejamiento automático', 'Testeo de frecuencias de audio', 'Soporte técnico corporativo']
+            },
+            'iPhone': {
+                name: 'Cotizador iPhone RemanOS',
+                desc: 'Diagnóstico automatizado de hardware y borrado certificado. Escala tu producción de móviles reacondicionados.',
+                price: 1.00,
+                unit: 'Dispositivos',
+                unitDesc: '1 dispositivo equivale a un iPhone procesado con éxito.',
+                icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>',
+                features: ['Diagnóstico de 50+ puntos', 'Borrado certificado NIST 800-88', 'Soporte técnico corporativo']
+            },
+            'PC': {
+                name: 'Cotizador PC & Laptop Suite',
+                desc: 'Auditoría completa y clonación masiva de sistemas operativos para ordenadores y portátiles.',
+                price: 1.20,
+                unit: 'Equipos',
+                unitDesc: '1 equipo equivale a una PC o Laptop auditada.',
+                icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>',
+                features: ['Test de estrés de CPU/GPU/RAM', 'Despliegue de SO por red (PXE)', 'Soporte técnico corporativo']
+            }
+        };
+
+        function openCalculatorView(moduleKey) {
+            // Cargar datos dinámicamente según el botón presionado
+            const data = modulesData[moduleKey];
+            currentModulePrice = data.price;
+            currentModuleName = moduleKey;
+
+            document.getElementById('calc-title').innerText = data.name;
+            document.getElementById('calc-desc').innerText = data.desc;
+            document.getElementById('calc-icon-container').innerHTML = data.icon;
+            document.getElementById('calc-unit-label').innerText = data.unit;
+            document.getElementById('calc-unit-desc').innerText = data.unitDesc;
+            document.getElementById('calc-question').innerText = `¿Cuántos ${data.unit.toLowerCase()} estimas procesar al mes?`;
+            
+            // Formatear precio base para mostrarlo
+            document.getElementById('calc-price-label').innerText = `$${data.price.toFixed(2)} USD`;
+
+            // Inyectar viñetas de características
+            const featuresHTML = data.features.map(feat => `
+                <li class="flex items-center gap-3">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 
+                    ${feat}
+                </li>
+            `).join('');
+            document.getElementById('calc-features').innerHTML = featuresHTML;
+
+            // Transición de vistas
+            viewLanding.classList.add('hidden');
+            viewCalculator.classList.remove('hidden');
+            
+            setTimeout(() => {
+                viewCalculator.classList.remove('opacity-0');
+            }, 50);
+
+            window.scrollTo(0, 0); 
+            calculatePrice(); 
+        }
+
+        function closeCalculatorView() {
+            viewCalculator.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                viewCalculator.classList.add('hidden');
+                viewLanding.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            }, 300); 
+        }
+
+        function calculatePrice() {
+            let qtyInput = document.getElementById('calc-qty').value;
+            let qty = parseInt(qtyInput) || 0;
+            
+            let total = qty * currentModulePrice;
+            
+            const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+            });
+            
+            document.getElementById('calc-total').innerText = formatter.format(total);
+        }
+
+        function proceedToRegistration() {
+            let qty = document.getElementById('calc-qty').value;
+            alert(`Siguiente paso: Se abrirá la pantalla de Registro.\nEl sistema guardará tu cotización de ${qty} unidades para el módulo de ${currentModuleName}.`);
+        }
+    </script>
+</body>
+</html>
